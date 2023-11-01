@@ -84,9 +84,9 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="usa-dropdown">
-                            <li><a class="dropdown-item" href="/usa-news/usa-latest.html">Latest</a></li>
-                            <li><a class="dropdown-item" href="/usa-news/usa-economy.html">Economy</a></li>
-                            <li><a class="dropdown-item" href="/usa-news/usa-politics.html">Politics</a></li>
+                            <li><a class="dropdown-item" href="usa-latest.html">Latest</a></li>
+                            <li><a class="dropdown-item" href="usa-economy.html">Economy</a></li>
+                            <li><a class="dropdown-item" href="usa-politics.html">Politics</a></li>
                         </ul>
                     </li>
 
@@ -119,9 +119,7 @@
 
                 <!-- Search box -->
                 <form class="d-flex" role="search">
-                    <!-- Disabled until second phase -->
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search"
-                        disabled>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" disabled>
                     <a href="search.html" class="btn btn-primary" type="submit" onclick="">
                         Search
                     </a>
@@ -132,11 +130,76 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 bg-white p-4 shadow rounded">
-                <!-- Search Results -->
+                <!-- Breaking News -->
                 <div class="text-center md-4">
-                    <h2 class="sub-heading">Search Results for " "</h2>
-                    <caption class="search-results-num" id="search-results-num">0 results</caption>
+                    <h2 class="sub-heading">Latest News</h2>
                     <hr>
+                </div>
+
+                <!-- News Articles -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://static01.nyt.com/images/2023/10/31/multimedia/31xp-christopher-bqcz/31xp-christopher-bqcz-jumbo.jpg?quality=75&auto=webp"
+                                alt="picture-of-trucks-in-deserts" class="img-fluid rounded w-100"
+                                style="max-width: 300px;">
+                            <div class="card-body">
+                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
+                                        href="https://www.nytimes.com/2023/10/31/us/tyler-christopher-dead.html">Tyler
+                                        Christopher, 'General Hospital' Actor, Is Dead at 50</a></h5>
+                                <p class="card-text">Christopher won a Daytime Emmy Award in 2016 for his role on “Days
+                                    of Our Lives.”
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-body-secondary">By:
+                                    Courtney
+                                    Rebecca Carballo</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://static01.nyt.com/images/2023/10/31/multimedia/31DC-CONG-bmkz/31DC-CONG-bmkz-jumbo.jpg?quality=75&auto=webp"
+                                alt="picture-of-hospital-in-gaza" class="img-fluid rounded w-100"
+                                style="max-width: 300px;">
+                            <div class="card-body">
+                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
+                                        href="https://www.nytimes.com/2023/10/31/us/politics/israel-aid-republicans-mike-johnson.html">Johnson's
+                                        Israel Aid Bill Sets Stage for a Clash Over Security Assistance
+                                    </a></h5>
+                                <p class="card-text">By splitting money for Israel's war effort from aid to Ukraine and
+                                    coupling it with spending cuts, Speaker Mike Johnson has put the House on a
+                                    collision course with the Senate and President Biden.
+
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-body-secondary">By:
+                                    Catie Edmondson and Karoun Demirjian</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_focal-762x508,f_auto,q_auto:best/rockcms/2023-10/1761967418-59b46a.jpg"
+                                alt="picture-of-people-with-crosses" class="img-fluid rounded w-100"
+                                style="max-width: 300px;">
+                            <div class="card-body">
+                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
+                                        href="https://www.nbcnews.com/news/us-news/maine-gunman-spoke-aggressively-guns-former-co-workers-say-warning-sig-rcna122833">
+                                        Maine gunman spoke 'aggressively' of guns, former co-workers say
+                                    </a></h5>
+                                <p class="card-text">While Robert Card didn't explicitly threaten to bring guns into the
+                                    workplace, he spoke of them regularly and had expressed a desire to buy a silencer,
+                                    one co-worker said.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-body-secondary">By:
+                                    Erik Ortiz and Melissa Chan</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
