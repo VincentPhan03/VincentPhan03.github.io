@@ -14,7 +14,8 @@ document.getElementById('search-input').addEventListener('keydown', function (ev
 function getArticles(type) {
     var url = 'https://newsapi.org/v2/everything?' +
         `q=${type}&` +
-        'sortBy=relevancy&' +
+        'language=en&' +
+        'sortBy=popularity&' +
         'pageSize=20&' +
         'apiKey=df5ff277e9b74ae7a772458c9df7ac7c';
 
