@@ -119,7 +119,7 @@
 
                 <!-- Search box -->
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" disabled>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
                     <a href="search.html" class="btn btn-primary" type="submit" onclick="">
                         Search
                     </a>
@@ -138,70 +138,18 @@
 
                 <!-- News Articles -->
                 <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2023-10/231030-al-asad-base-iraq-mn-1120-98136b.jpg"
-                                alt="picture-of-trucks-in-deserts" class="img-fluid rounded w-100"
-                                style="max-width: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
-                                        href="https://www.nbcnews.com/news/world/us-targets-syria-iraq-attacked-at-least-23-past-two-weeks-rcna122780">U.S.
-                                        targets in Syria and Iraq attacked at least 23 times in past
-                                        two weeks</a></h5>
-                                <p class="card-text">The Pentagon said last week that the groups conducting the attacks
-                                    are supported by Iran and its Islamic Revolutionary Guard Corps.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-body-secondary">By:
-                                    Courtney
-                                    Kube and Mosheh Gains</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2023-10/231030-Al-Quds-hospital-ew-535p-08c1da.jpg"
-                                alt="picture-of-hospital-in-gaza" class="img-fluid rounded w-100"
-                                style="max-width: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
-                                        href="https://www.nbcnews.com/news/world/trapped-palestinians-refusing-israeli-orders-evacuate-gaza-hospital-rcna122785">Trapped
-                                        Palestinians refusing Israeli orders to evacuate from Gaza hospital
-                                    </a></h5>
-                                <p class="card-text">“They ask people to evacuate themselves with no transportation,
-                                    with no fuel, no cars,” one aid worker said. “How are they going to make it?”</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-body-secondary">By:
-                                    Chantal Da Silva, Yasmine Salam and Corky Siemaszko</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_focal-762x508,f_auto,q_auto:best/rockcms/2023-10/1761967418-59b46a.jpg"
-                                alt="picture-of-people-with-crosses" class="img-fluid rounded w-100"
-                                style="max-width: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
-                                        href="https://www.nbcnews.com/news/us-news/maine-gunman-spoke-aggressively-guns-former-co-workers-say-warning-sig-rcna122833">
-                                        Maine gunman spoke 'aggressively' of guns, former co-workers say
-                                    </a></h5>
-                                <p class="card-text">While Robert Card didn't explicitly threaten to bring guns into the
-                                    workplace, he spoke of them regularly and had expressed a desire to buy a silencer,
-                                    one co-worker said.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-body-secondary">By:
-                                    Erik Ortiz and Melissa Chan</small>
-                            </div>
-                        </div>
+                    <div class="col" id="article-container">
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="/scripts/script.js"></script>
+    <script>
+        getArticles("Breaking News")
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

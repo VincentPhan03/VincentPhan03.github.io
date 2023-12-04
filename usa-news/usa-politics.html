@@ -130,79 +130,26 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 bg-white p-4 shadow rounded">
-                <!-- U.S Politics -->
+                <!-- Breaking News -->
                 <div class="text-center md-4">
-                    <h2 class="sub-heading">U.S Politics</h2>
+                    <h2 class="sub-heading">USA Politics</h2>
                     <hr>
                 </div>
 
                 <!-- News Articles -->
                 <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://static01.nyt.com/images/2023/10/30/multimedia/30dc-biden-lhbw/30dc-biden-lhbw-jumbo.jpg?quality=75&auto=webp"
-                                alt="picture-of-old-man-and-vice-president" class="img-fluid rounded w-100"
-                                style="max-width: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
-                                        href="https://www.nytimes.com/2023/10/30/us/politics/biden-ai-regulation.html">Biden
-                                        Issues Executive Order to Create A.I. Safeguards
-                                    </a></h5>
-                                <p class="card-text">The sweeping order is a first step as the Biden administration
-                                    seeks to put guardrails on a global technology that offers great promise but also
-                                    carries significant dangers.
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-body-secondary">By:
-                                    Cecilia Kang and David E. Sanger</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://static01.nyt.com/images/2023/10/27/multimedia/pol-burgum-jgwk/pol-burgum-jgwk-jumbo.jpg?quality=75&auto=webp"
-                                alt="picture-of-another-rich-man" class="img-fluid rounded w-100"
-                                style="max-width: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
-                                        href="https://www.nytimes.com/2023/10/31/us/politics/doug-burgum-ads-spending.html">Why
-                                        Doug Burgum Is Staying in a Race He Can Afford to Lose
-                                    </a></h5>
-                                <p class="card-text">With a substantial personal fortune, the North Dakota governor is
-                                    insistent on spreading his message despite calls to drop out.
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-body-secondary">By:
-                                    Rebecca Davis O'Brien</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="https://static01.nyt.com/images/2023/10/26/multimedia/26ny-trump-explainer2-gmpq/26ny-trump-explainer2-gmpq-jumbo.jpg?quality=75&auto=webp"
-                                alt="picture-of-suprisingly-orange-man" class="img-fluid rounded w-100"
-                                style="max-width: 300px;">
-                            <div class="card-body">
-                                <h5 class="card-title"><a target="_blank" rel="noopener noreferrer"
-                                        href="https://www.nytimes.com/2023/10/26/nyregion/trump-gag-orders-fines.html">
-                                        How Judges Restrain Trump: Gag Orders, Fines and Possible Jail Time
-                                    </a></h5>
-                                <p class="card-text">Courts have a variety of options to stop Donald J. Trump's attacks
-                                    on staff members and witnesses. The question is whether any of them will work.
-                                </p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-body-secondary">By:
-                                    Jonah E. Bromwich, Ben Protess and Alan Feuer</small>
-                            </div>
-                        </div>
+                    <div class="col" id="article-container">
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="/scripts/script.js"></script>
+    <script>
+        getArticles("United States Politics")
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
