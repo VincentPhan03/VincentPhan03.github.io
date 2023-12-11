@@ -8,7 +8,7 @@ function getArticles(type) {
         `q=${type}&` +
         'lang=en&' +
         'sortBy=popularity&' +
-        'max=1&' +
+        'max=5&' +
         'apikey=e5df2b3dc3dd4d2432e1f98dfb18bd90';
 
     let articleRequest = new XMLHttpRequest();
@@ -35,6 +35,15 @@ function updateCard(articles) {
 
 // Function to generate card HTML
 function getCard(imgsrc, articlelink, cardtitle, cardtext, source, articleId) {
+    let article = {
+        title: cardtitle,
+        url: articlelink,
+        image: imgsrc,
+        description: cardtext,
+        source: source.name 
+    };
+    articles[articleId] = article;
+
     return `<div class="col">
         <div class="card h-100">
             <img src="${imgsrc}"
@@ -56,18 +65,14 @@ function getCard(imgsrc, articlelink, cardtitle, cardtext, source, articleId) {
 
 // Function to save articles to local storage
 function saveArticle(articleId) {
-    // Get the article data from the articles array
-    let article = articles.includes(articleId);
-    console.log(article);
-    if (!article) {
-        // Save the article to local storage
-        let savedArticles = JSON.parse(localStorage.getItem('savedArticles')) || [];
-        
-        savedArticles.push(article);
-        localStorage.setItem('savedArticles', JSON.stringify(savedArticles));
-        alert('Article saved!');
-    }
-    else {
-        alert('Article has been saved already!');
+    let article = articles[articleId]
+
+    // Check if the article already exists (based on URL or another unique property)
+    if (!localStorage.getItem(articleId)) {
+        localStorage.setItem(articleId, JSON.stringify(article));
+
+        alert("Article Saved");
+    } else {
+        alert("Article Already Saved");
     }
 }
