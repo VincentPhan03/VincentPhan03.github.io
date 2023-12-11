@@ -16,18 +16,12 @@
 <!-- Main area for news articles -->
 
 <body class="bg-light">
-    <div class="container-lg">
-        <div class="text-center m-4">
-            <h1 class="title">Today's Timeline</h1>
-        </div>
-    </div>
-
     <!-- Navbar top of page -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- Logo and Header of website-->
         <div class="container-fluid justify-content-evenly">
             <a class="navbar-brand" href="index.html">
-                <img src="/images/logo.jpg" alt="picture-of-logo">
+                <h1 class="title">Today's Timeline</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -97,9 +91,9 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="world-dropdown">
-                            <li><a class="dropdown-item disabled" href="#">Breaking News</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Isreal-Hamas</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Environment</a></li>
+                            <li><a class="dropdown-item" href="/world-news/russia-ukraine.html">Russia-Ukraine</a></li>
+                            <li><a class="dropdown-item" href="/world-news/isreal-hamas.html">Isreal-Hamas</a></li>
+                            <li><a class="dropdown-item" href="/world-news/environment.html">Environment</a></li>
                         </ul>
                     </li>
 
@@ -110,21 +104,18 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="technology-dropdown">
-                            <li><a class="dropdown-item disabled" href="#">Breaking News</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Apple</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Microsoft</a></li>
+                            <li><a class="dropdown-item" href="/tech-news/ai.html">Artifical Intelligence</a></li>
+                            <li><a class="dropdown-item" href="/tech-news/apple.html">Apple</a></li>
+                            <li><a class="dropdown-item" href="/tech-news/microsoft.html">Microsoft</a></li>
                         </ul>
                     </li>
                 </ul>
 
                 <!-- Search box -->
-                <form class="d-flex" role="search">
-                    <!-- Disabled until second phase -->
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search"
-                        disabled>
-                    <a href="search.html" class="btn btn-primary" type="submit" onclick="">
-                        Search
-                    </a>
+                <form class="d-flex" role="search" action="/search.html" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        id="search-input" name="query">
+                    <button class="btn btn-primary" type="submit" id="search-button">Search</button>
                 </form>
             </div>
         </div>
@@ -137,11 +128,20 @@
                     <h2 class="sub-heading">Search Results for " "</h2>
                     <caption class="search-results-num" id="search-results-num">0 results</caption>
                     <hr>
+
+                    <!-- News Articles -->
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col" id="article-container">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="/scripts/script.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

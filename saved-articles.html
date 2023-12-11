@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <!-- Logo and Header of website-->
         <div class="container-fluid justify-content-evenly">
-            <a class="navbar-brand" href="/index.html">
+            <a class="navbar-brand" href="index.html">
                 <h1 class="title">Today's Timeline</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -32,44 +32,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item m-3">
-                        <!-- Account Link -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#account-modal">
-                            Subscribe
-                        </button>
-
-                        <!-- Account Modal/Form -->
-                        <div class="modal fade" id="account-modal" tabindex="-1" aria-labelledby="account"
-                            aria-hidden="true">
-                            <div class="modal-dialog d-flex justify-content-center">
-                                <div class="modal-content w-75">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="account">Subscribe</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close">
-                                        </button>
-                                    </div>
-                                    <div class="modal-body p-4">
-                                        <form>
-                                            <!-- Name input -->
-                                            <div class="form-outline mb-4">
-                                                <input type="text" id="name3" class="form-control">
-                                                <label class="form-label" for="name3">Name</label>
-                                            </div>
-
-                                            <!-- Email input -->
-                                            <div class="form-outline mb-4">
-                                                <input type="email" id="email3" class="form-control">
-                                                <label class="form-label" for="email3">Email address</label>
-                                            </div>
-
-                                            <!-- Submit button -->
-                                            <button type="submit" class="btn btn-primary btn-block">Send</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Saved Articles Button -->
+                        <a  class="btn btn btn-primary" href="saved-articles.html" role="button">
+                            Saved Articles 
+                        </a>
                     </li>
                     <li class="nav-item dropdown m-3">
                         <a class="btn btn btn-primary dropdown-toggle" href="#" role="button" id="usa-dropdown"
@@ -78,9 +44,9 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="usa-dropdown">
-                            <li><a class="dropdown-item" href="usa-latest.html">Latest</a></li>
-                            <li><a class="dropdown-item" href="usa-economy.html">Economy</a></li>
-                            <li><a class="dropdown-item" href="usa-politics.html">Politics</a></li>
+                            <li><a class="dropdown-item" href="usa-news/usa-latest.html">Latest</a></li>
+                            <li><a class="dropdown-item" href="usa-news/usa-economy.html">Economy</a></li>
+                            <li><a class="dropdown-item" href="usa-news/usa-politics.html">Politics</a></li>
                         </ul>
                     </li>
 
@@ -91,7 +57,7 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="world-dropdown">
-                            <li><a class="dropdown-item" href="/world-news/russia-ukraine.html">Russia-Ukraine</a></li>
+                            <li><a class="dropdown-item" href="/world-news/russia-ukraine.html">Russia-Ukraines</a></li>
                             <li><a class="dropdown-item" href="world-news/isreal-hamas.html">Isreal-Hamas</a></li>
                             <li><a class="dropdown-item" href="/world-news/environment.html">Environment</a></li>
                         </ul>
@@ -104,7 +70,7 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="technology-dropdown">
-                            <li><a class="dropdown-item" href="/tech-news/ai.html">Artificial Intelligence</a></li>
+                            <li><a class="dropdown-item" href="tech-news/ai.html">Artificial Intelligence</a></li>
                             <li><a class="dropdown-item" href="/tech-news/apple.html">Apple</a></li>
                             <li><a class="dropdown-item" href="/tech-news/microsoft.html">Microsoft</a></li>
                         </ul>
@@ -112,26 +78,28 @@
                 </ul>
 
                 <!-- Search box -->
-                <form class="d-flex" role="search" id="search-form">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-                    <button class="btn btn-primary" type="submit" id="search-button">Search</button>
-                </form>                             
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+                    <a href="search.html" class="btn btn-primary" type="submit" onclick="">
+                        Search
+                    </a>
+                </form>
             </div>
         </div>
     </nav>
     <div class="container mt-5">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 bg-white p-4 shadow rounded">
-                <!-- Breaking News -->
+                <!-- Saved Articles -->
                 <div class="text-center md-4">
-                    <h2 class="sub-heading">USA Politics</h2>
+                    <h2 class="sub-heading">Saved Articles</h2>
                     <hr>
                 </div>
 
                 <!-- News Articles -->
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col" id="article-container">
-                        
+
                     </div>
                 </div>
             </div>
@@ -139,21 +107,8 @@
     </div>
 
     <script src="/scripts/script.js"></script>
-    <script>
-        getArticles("United States Politics")
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Extract the 'query' parameter from URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('query');
-            document.getElementById('search-input').value = query;
+    <script src="/scripts/saved-articles.js"></script>
     
-            // Fetch and display articles based on the query
-            getArticles(query);
-        });
-    </script>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
