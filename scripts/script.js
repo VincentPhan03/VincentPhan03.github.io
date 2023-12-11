@@ -8,7 +8,7 @@ function getArticles(type) {
         `q=${type}&` +
         'lang=en&' +
         'sortBy=popularity&' +
-        'max=5&' +
+        'max=10&' +
         'apikey=e5df2b3dc3dd4d2432e1f98dfb18bd90';
 
     let articleRequest = new XMLHttpRequest();
