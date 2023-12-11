@@ -67,7 +67,7 @@ function getCard(imgsrc, articlelink, cardtitle, cardtext, source, articleId) {
 function saveArticle(articleId) {
     let article = articles[articleId]
 
-    // Check if the article already exists (based on URL or another unique property)
+    // Check if the article already exists
     if (!localStorage.getItem(articleId)) {
         localStorage.setItem(articleId, JSON.stringify(article));
 

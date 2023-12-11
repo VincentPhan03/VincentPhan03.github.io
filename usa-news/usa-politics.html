@@ -32,44 +32,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item m-3">
-                        <!-- Account Link -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#account-modal">
-                            Subscribe
-                        </button>
-
-                        <!-- Account Modal/Form -->
-                        <div class="modal fade" id="account-modal" tabindex="-1" aria-labelledby="account"
-                            aria-hidden="true">
-                            <div class="modal-dialog d-flex justify-content-center">
-                                <div class="modal-content w-75">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="account">Subscribe</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close">
-                                        </button>
-                                    </div>
-                                    <div class="modal-body p-4">
-                                        <form>
-                                            <!-- Name input -->
-                                            <div class="form-outline mb-4">
-                                                <input type="text" id="name3" class="form-control">
-                                                <label class="form-label" for="name3">Name</label>
-                                            </div>
-
-                                            <!-- Email input -->
-                                            <div class="form-outline mb-4">
-                                                <input type="email" id="email3" class="form-control">
-                                                <label class="form-label" for="email3">Email address</label>
-                                            </div>
-
-                                            <!-- Submit button -->
-                                            <button type="submit" class="btn btn-primary btn-block">Send</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Saved Articles Button -->
+                        <a  class="btn btn btn-primary" href="saved-articles.html" role="button">
+                            Saved Articles 
+                        </a>
                     </li>
                     <li class="nav-item dropdown m-3">
                         <a class="btn btn btn-primary dropdown-toggle" href="#" role="button" id="usa-dropdown"
@@ -109,13 +75,7 @@
                             <li><a class="dropdown-item" href="/tech-news/microsoft.html">Microsoft</a></li>
                         </ul>
                     </li>
-                </ul>
-
-                <!-- Search box -->
-                <form class="d-flex" role="search" id="search-form">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-                    <button class="btn btn-primary" type="submit" id="search-button">Search</button>
-                </form>                             
+                </ul>                           
             </div>
         </div>
     </nav>
